@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComplainEase | Digital Complaint Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="#" class="brand" data-page="home">
+    <span class="brand-icon">C</span>
+    ComplainEase
+  </a>
+  <nav>
+    <button class="nav-link" data-page="home">Home</button>
+    <button class="nav-link" data-page="login">Login</button>
+    <button class="btn btn-small" data-page="register">Get Started</button>
+  </nav>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="page active">
+    <div class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">YOUR VOICE MATTERS</span>
+        <h1>Problems deserve<br> <span>better solutions.</span></h1>
+        <p>
+          Raise complaints, follow their progress, and stay informed.
+          A simpler way to make your campus better.
+        </p>
+        <div class="hero-actions">
+          <button class="btn" data-page="register">Raise a Complaint →</button>
+          <button class="btn btn-outline" data-page="login">Explore Dashboard</button>
+        </div>
+        <div class="mini-note">✓ Easy to use &nbsp; ✓ Track every complaint</div>
+      </div>
+      <div class="hero-art">
+        <div class="art-circle">
+          <div class="art-card">
+            <div class="art-check">✓</div>
+            <h3>Complaint received!</h3>
+            <p>Your concern matters to us.</p>
+            <span class="status status-progress">In Progress</span>
+          </div>
+          <span class="art-leaf leaf-one">✦</span>
+          <span class="art-leaf leaf-two">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-heading">
+        <span class="eyebrow">SIMPLE. TRANSPARENT. EFFECTIVE.</span>
+        <h2>Everything in one place</h2>
+        <p>From reporting an issue to seeing it resolved.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">✎</span>
+          <h3>Raise Complaints</h3>
+          <p>Report campus issues with a clear description and priority.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">◷</span>
+          <h3>Track Progress</h3>
+          <p>See whether your complaint is open, in progress, or resolved.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">✓</span>
+          <h3>Better Management</h3>
+          <p>Keep complaint records organized in one convenient dashboard.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="bottom-cta">
+      <h2>Let's make things better.</h2>
+      <p>Start using ComplainEase for your campus complaint demo.</p>
+      <button class="btn" data-page="register">Get Started →</button>
+    </section>
+  </section>
+
+  <!-- LOGIN -->
+  <section id="login" class="page auth-page">
+    <div class="auth-card">
+      <div class="auth-symbol">C</div>
+      <span class="eyebrow">WELCOME BACK</span>
+      <h2>Login to ComplainEase</h2>
+      <p class="muted">Enter your details to continue.</p>
+
+      <form id="loginForm">
+        <label for="loginName">Your name</label>
+        <input id="loginName" required placeholder="e.g. Rahul">
+
+        <label for="loginEmail">Email address</label>
+        <input id="loginEmail" type="email" required placeholder="you@example.com">
+
+        <label for="loginRole">Choose demo role</label>
+        <select id="loginRole">
+          <option value="student">Student</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <button class="btn full-width" type="submit">Continue to Dashboard →</button>
+      </form>
+
+      <p class="auth-switch">New to ComplainEase?
+        <button class="text-button" data-page="register">Create an account</button>
+      </p>
+      <p class="demo-note">College demo mode: this form does not provide secure authentication.</p>
+    </div>
+  </section>
+
+  <!-- REGISTER -->
+  <section id="register" class="page auth-page">
+    <div class="auth-card">
+      <div class="auth-symbol">C</div>
+      <span class="eyebrow">GET STARTED</span>
+      <h2>Create your account</h2>
+      <p class="muted">Join ComplainEase and make your voice heard.</p>
+
+      <form id="registerForm">
+        <label for="registerName">Full name</label>
+        <input id="registerName" required minlength="2" placeholder="Enter your name">
+
+        <label for="registerEmail">Email address</label>
+        <input id="registerEmail" type="email" required placeholder="you@example.com">
+
+        <button class="btn full-width" type="submit">Create Demo Account →</button>
+      </form>
+
+      <p class="auth-switch">Already registered?
+        <button class="text-button" data-page="login">Login</button>
+      </p>
+      <p class="demo-note">Demo registration only. No password or real account is created.</p>
+    </div>
+  </section>
+
+  <!-- APP: STUDENT AND ADMIN -->
+  <section id="app" class="page app-page">
+    <aside class="sidebar">
+      <a href="#" class="brand side-brand" data-page="home">
+        <span class="brand-icon">C</span> ComplainEase
+      </a>
+      <div class="user-chip">
+        <div class="avatar" id="userAvatar">S</div>
+        <div>
+          <strong id="sidebarName">Student</strong>
+          <small id="sidebarRole">Student account</small>
+        </div>
+      </div>
+
+      <p class="side-label">WORKSPACE</p>
+      <button class="side-link active" data-view="dashboard">▦ &nbsp; Dashboard</button>
+      <button class="side-link" data-view="raise">＋ &nbsp; Raise Complaint</button>
+      <button class="side-link" data-view="mine">☷ &nbsp; My Complaints</button>
+      <button class="side-link admin-only" data-view="admin">⚙ &nbsp; Manage Complaints</button>
+
+      <div class="sidebar-bottom">
+        <button class="side-link" id="switchRole">⇄ &nbsp; Switch Student/Admin</button>
+        <button class="side-link" id="logoutButton">↪ &nbsp; Back to Home</button>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <div class="workspace-top">
+        <div>
+          <span class="eyebrow">COMPLAINT MANAGEMENT</span>
+          <h2 id="viewTitle">Dashboard</h2>
+        </div>
+        <span class="role-pill" id="rolePill">STUDENT DEMO</span>
+      </div>
+
+      <!-- DASHBOARD VIEW -->
+      <section id="view-dashboard" class="app-view">
+        <div class="welcome-banner">
+          <div>
+            <span class="eyebrow">YOUR CAMPUS, YOUR VOICE</span>
+            <h2 id="welcomeTitle">Welcome back!</h2>
+            <p>Keep track of concerns and follow their progress.</p>
+          </div>
+          <span class="welcome-art">✦</span>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-icon">☷</span>
+            <p>Total Complaints</p>
+            <h2 id="totalCount">0</h2>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon open-icon">◷</span>
+            <p>Open</p>
+            <h2 id="openCount">0</h2>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon progress-icon">↻</span>
+            <p>In Progress</p>
+            <h2 id="progressCount">0</h2>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon resolved-icon">✓</span>
+            <p>Resolved</p>
+            <h2 id="resolvedCount">0</h2>
+          </article>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <h3 id="recentTitle">Recent Complaints</h3>
+              <p class="muted">Your latest complaint activity.</p>
+            </div>
+            <button class="btn btn-small" data-view="raise">＋ New Complaint</button>
+          </div>
+          <div id="recentList"></div>
+        </div>
+      </section>
+
+      <!-- RAISE COMPLAINT VIEW -->
+      <section id="view-raise" class="app-view hidden">
+        <div class="panel form-panel">
+          <h3>Tell us what needs attention</h3>
+          <p class="muted">Provide the details so the issue can be tracked.</p>
+          <form id="complaintForm">
+            <label for="complaintTitle">Complaint title</label>
+            <input id="complaintTitle" maxlength="100" required
+              placeholder="e.g. Classroom projector not working">
+
+            <div class="form-row">
+              <div>
+                <label for="complaintCategory">Category</label>
+                <select id="complaintCategory" required>
+                  <option value="">Choose a category</option>
+                  <option>Academic</option>
+                  <option>Hostel</option>
+                  <option>Infrastructure</option>
+                  <option>Maintenance</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="complaintPriority">Priority</label>
+                <select id="complaintPriority" required>
+                  <option value="Low">Low</option>
+                  <option value="Medium" selected>Medium</option>
+                  <option value="High">High</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="complaintDescription">Description</label>
+            <textarea id="complaintDescription" rows="5" maxlength="1500"
+              required placeholder="Explain the problem clearly..."></textarea>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Submit Complaint →</button>
+              <button class="btn btn-outline" type="reset">Clear Form</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- MY COMPLAINTS VIEW -->
+      <section id="view-mine" class="app-view hidden">
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <h3>My Complaints</h3>
+              <p class="muted">Check the latest status of your submissions.</p>
+            </div>
+            <button class="btn btn-small" data-view="raise">＋ New Complaint</button>
+          </div>
+          <div id="myComplaintList"></div>
+        </div>
+      </section>
+
+      <!-- ADMIN VIEW -->
+      <section id="view-admin" class="app-view hidden">
+        <div class="admin-notice">
+          <strong>Admin demonstration mode</strong>
+          <p>Review demo complaints and update their status below.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <h3>All Complaints</h3>
+              <p class="muted">Manage complaints stored in this browser.</p>
+            </div>
+          </div>
+          <div id="adminComplaintList"></div>
+        </div>
+      </section>
+
+      <footer class="app-footer">ComplainEase · OOSE College Project · Demo Version</footer>
+    </div>
+  </section>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
